@@ -1,6 +1,7 @@
 import css from './Form.module.css'
 import { useState } from 'react'
 import { Notify } from 'notiflix'
+import PropTypes from 'prop-types';
 
 
 export const Form = ({addContact, contacts}) => {
@@ -71,3 +72,8 @@ function handleSubmit(ev) {
         )
 
 }
+
+Form.propTypes = {
+  addContact: PropTypes.func.isRequired,
+  contacts: PropTypes.array.isRequired,
+};
